@@ -64,7 +64,7 @@ def root_window():
             for address in interface_addresses:
                 Label(screenP, text=f"=== Interface: {interface_name} ===").grid()
                 if str(address.family) == 'AddressFamily.AF_INET':
-                    Label(screenP, text=f"  IP Address: {address.address}").grid()
+                    Label(screenP, text=f"  Local host address: {address.address}").grid()
                     Label(screenP, text=f"  Netmask: {address.netmask}").grid()
                     Label(screenP, text=f"  Broadcast IP: {address.broadcast}").grid()
                 elif str(address.family) == 'AddressFamily.AF_gridET':
