@@ -6,6 +6,7 @@ from tkinter import *
 import psutil
 from datetime import datetime
 
+ # For the memory
 def get_size(bytes, suffix="B"):
     factor = 1024
     for unit in ["", "K", "M", "G", "T", "P"]:
@@ -83,7 +84,7 @@ def root_window():
         moreFeaturesButton1 = Button(root, text="Network Information",borderwidth=0, bg="#b6b6b6", width=20, height=1, command=privopen).grid(row=15, column=0)
         moreFeaturesButton2 = Button(root, text="Computer Information", borderwidth=0, bg="#b6b6b6", width=20, height=1, command=open_computer_info).grid()
 
-        root.geometry("330x800")
+        root.geometry("400x800")
 
 
     # I -------------- This is the main root of the window ---------------------- I
@@ -105,7 +106,15 @@ def root_window():
 
     button_more_features = Button(root, text="More features in buity GUI",borderwidth=0, bg="#b6b6b6",  command=moreFeatures).grid()
     
-    Label_space = Label(root, text="\n\n\n\n\n" * 6).grid()
+    Label_basic_info = Label(root, text="Basic information:").grid()
+    Label_space = Label(root, text="\n").grid()
+    Label_machine = Label(root, text="You are running: " + platform.machine() + " architecture").grid()
+    Label_processor_cpu = Label(root, text="You are running: " + platform.processor() + " As your processor").grid()
+    Label_release = Label(root, text= "Release: " + platform.release()).grid()
+
+
+
+    Label_space = Label(root, text="\n\n\n" * 5).grid()
     
     Label_header_buttom = Label(root, text="_" * 55).grid()
     button_exit = Button(root, text="Exit",borderwidth=0,bg="#b6b6b6", command=exit).grid(pady=15)
