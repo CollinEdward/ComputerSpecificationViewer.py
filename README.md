@@ -6,4 +6,4 @@ Clone
 git clone https://github.com/CollinEdward/ComputerSpecificationViewer.py.git
 ```
 
-[!Screenshot](Preview.png)
+![Screenshot](Preview.png)
