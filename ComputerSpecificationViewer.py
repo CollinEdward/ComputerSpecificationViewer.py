@@ -90,7 +90,7 @@ def root_window():
     # I -------------- This is the main root of the window ---------------------- I
     root = Tk()
     root.title('GUI')
-    root.geometry("330x700")
+    root.geometry("385x700")
     root.resizable(height=False, width=False)
     
 
